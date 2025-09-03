@@ -1,0 +1,171 @@
+:root{
+  --darkModeTextColor: #f2f2f2;
+}
+*, body{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Sans-Serif;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #0F0C29, #2E295F);
+  /* background-image: url('img/cd0d6541ebae99de8c5d6f000a6bcec0.jpg'); */
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+}
+.container-box{
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+.listAlbum{
+  width: 350px;
+  background: rgba(0,0,0,0.25);
+  box-shadow: 3px 3px 5px rgba(255,255,255,0.200);
+  border: 1px solid rgba(255,255,255,0.307);
+  height: 80px;
+  margin: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  transition: 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+.listAlbum:hover{
+  transform: scale(1.05);
+}
+.imgAlbum{
+  height: 80%;
+  width: 70px;
+  margin: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 2px;
+}
+.musicInfo{
+  display: grid;
+  color: var(--darkModeTextColor);
+  margin: 0;
+  line-height: 0;
+}
+.musicInfo h1{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.musicInfo p{
+  font-size: 14px;
+}
+/* tampilan lirik */
+.box-bg2{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, #0F0C29, #2E295F);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.box2{
+  width: 350px;
+  height: 650px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.300);
+}
+.lyric{
+  max-width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  overflow-y: scroll;
+  white-space: normal;
+  word-wrap: break-word;
+  background: rgba(0,0,0,0.100);
+  backdrop-filter: blur(3px);
+}
+.box-bottom{
+  width: 100%;
+  height: 20%;
+  border-top: 3px solid #000;
+  display: flex;
+  background-color: rgba(23,23,23,0.500);
+}
+.lyric h1{
+  font-size: 24px;
+  margin: 10px;
+  margin-bottom: 5px;
+  color: #b0b0b0;
+  /* color: #21242A; */
+  max-width: 94%;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.29);
+}
+.albumImg{
+  width: 85px;
+  height: 85px;
+  border: 0.5px solid #000;
+  margin-left: 10px;
+  margin-top: 18px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.400);
+  background-position: center;
+  background-size: cover;
+}
+.song-info{
+  text-align: left;
+  
+  color: #fff;
+  margin: 10px;
+  height: 60px;
+  font-size: 0.5rem;
+  width: 220px;
+}
+.fungsi{
+  margin-top: 10px;
+  width: 220px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.back{
+  width: 35px;
+  height: 80%;
+  background-image: url('img/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg');
+  background-position: center;
+  background-size: cover;
+}
+.pause{
+  width: 35px;
+  height: 80%;
+  background-image: url('img/pause_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg');
+  background-position: center;
+  background-size: cover;
+}
+.replay{
+  width: 35px;
+  height: 80%;
+  background-image: url('img/replay_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg');
+  background-position: center;
+  background-size: cover;
+}
+.show{
+  display: flex;
+}
+.hidden{
+  display: none;
+}
