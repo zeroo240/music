@@ -6,6 +6,7 @@ let songs = [
     imgBackground: "3a438da43eda8ad0e96f72b1927f51e5.jpg",
     audioSrc: "AboutYou-The1975.mp3",
     lyric: [
+      {text: "...", time: 0},
       {text: "I know a place", time: 45000},
       {text: "It's somewhere I go when I need to remember your face", time: 10000},
       {text: "We get married in our heads", time: 9800},
@@ -21,8 +22,9 @@ let songs = [
     imgBackground: "55c599214e84147e26a9b61759f2b373.jpg",
     audioSrc: "Somebody's-Pleasure-Aziz-Hedra.mp3",
     lyric: [
+      {text: "...", time: 0},
       {text: "I've been too busy, ignoring, and hiding", time: 7000},
-      {text: "About what my heart actually say", time: 7001},
+      {text: "About what my heart actually say", time: 7000},
       {text: "Stay awake while I'm drowning on my thoughts", time: 9700},
       {text: "Sometimes a happiness is just a happiness", time: 6500},
       {text: "I've never been enjoyin' my serenity", time: 11500},
@@ -37,6 +39,11 @@ let songs = [
       {text: "That I'm not just somebody's pleasure", time: 4000},
       {text: "I always pretending and lying", time: 4700},
       {text: "Like I'm used to feel empty", time: 6000},
+      {text: "'Cause all I got is unhappy", time: 3000},
+      {text: "Happiness, can't I get happiness?", time: 4000},
+      {text: "I've never been enjoyin' my serenity", time: 4500},
+      {text: "Even if I've got a lot of company", time: 5300},
+      {text: "That makes me happy", time: 5500},
       ]
   },
   {
@@ -97,11 +104,12 @@ listAlbum.addEventListener("click", ()=>{
   container.classList.add("hidden");
   let audio = new Audio(`audio/${song.audioSrc}`);
   box.innerHTML="";
-  ganti.style.backgroundImage = `url(img/${song.imgBackground})`;
+  // ganti.style.backgroundImage = `url(img/${song.imgBackground})`;
   
       // main music
   setTimeout(()=>{
     audio.play();
+    if(song.lyric && song.lyric.length > 0){
     let totalTime = 0;
     song.lyric.forEach(line => {
       totalTime += line.time;
@@ -114,6 +122,13 @@ listAlbum.addEventListener("click", ()=>{
         lyricDisplay.style.color="#fff";
       },totalTime);
     });
+    }else{
+      // ketika lirik tidak ada
+      let noLyric = document.createElement("p");
+      noLyric.textContent = Error;
+      noLyric.style = "text-align: center; color: rgb(190,0,0); font-style: italic;";
+      box.appendChild(noLyric)
+    }
   }, 100); // delay
   
   // fungsi tombol kembali
