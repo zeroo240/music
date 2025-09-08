@@ -104,7 +104,6 @@ listAlbum.addEventListener("click", ()=>{
   container.classList.add("hidden");
   let audio = new Audio(`audio/${song.audioSrc}`);
   box.innerHTML="";
-  // ganti.style.backgroundImage = `url(img/${song.imgBackground})`;
   
       // main music
   setTimeout(()=>{
